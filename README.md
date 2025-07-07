@@ -6,6 +6,13 @@ MBuffet is a web-based prototype music platform developed using PHP and MySQL. I
 
 ---
 
+## Tech Stack
+
+- Frontend: HTML, CSS, JavaScript
+- Backend: PHP (Vanilla PHP, no framework)
+- Database: MySQL (with phpMyAdmin via XAMPP)
+- Development Environment: XAMPP (Apache + MySQL)
+
 ## Features
 
 - User authentication system (login & registration)
