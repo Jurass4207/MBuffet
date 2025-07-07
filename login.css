@@ -1,0 +1,88 @@
+.result-div-n {
+    font-family: system-ui;
+    position: relative;
+    text-align: left;
+    color: red;
+    margin-top: 5px;
+}
+.result-div-y {
+    font-family: system-ui;
+    position: relative;
+    text-align: left;
+    color: greenyellow;
+    margin-top: 5px;
+}
+.main-icon {
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    z-index: 9999;
+}
+.top-bar {
+    position: absolute;
+    width: 100%;
+    height: 100px; 
+    background-color: white;
+    border: #aaa solid 1px;
+}
+.marketing-word1 {
+    position: absolute;
+    left: 180px;
+    top:330px;
+}
+.marketing-word2 {
+    position: absolute;
+    left: 200px;
+    top:460px;
+}
+.marketing-word3 {
+    position: absolute;
+    left: 180px;
+    top:330px;
+}
+.marketing-word4 {
+    position: absolute;
+    left: 200px;
+    top:460px;
+}
+.icon {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.input-row {
+    font-family: system-ui;
+    text-align: left;
+    color: #fff;
+    margin-top: 5px;
+}
+.login-button {
+    background-color: #004080; /* 深藍色背景 */
+    color: #fff; /* 文字颜色 */
+    border: none; /* 無邊框 */
+    padding: 12px 24px; /* 上下左右邊距 */
+    border-radius: 30px; /* 圆角 */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.login-button:hover {
+    background-color: #002b66;
+}
+.link-button {
+    background: none;
+    border: none;
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 5px;
+}
+.link-button:hover { /* 懸停時改變顏色*/
+    color: #0066cc;
+}
+.link-button:active {
+    color: #004466;
+}

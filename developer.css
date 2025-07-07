@@ -1,0 +1,44 @@
+/*左側菜單按鈕相關*/
+.showMusiclist-button {    /*顯示音樂清單按鈕*/
+    top: 13%;
+}
+.add-new-singer-button {   /*新增歌手或樂團名稱按鈕*/
+    top: 25%;
+}
+.edit-singer-button {   /*新增歌手或樂團名稱按鈕*/
+    top: 33%;
+}
+.delete-singer-button {   /*新增歌手或樂團名稱按鈕*/
+    top: 41%;
+}
+.show-form-button {        /*新增歌曲表單按鈕*/
+    top: 49%;
+}
+.createPlaylist-button {   /*建立播放清單按鈕*/
+    top: 57%;
+}
+.deletePlaylist-button {   /*刪除播放清單按鈕*/
+    top: 65%;
+}
+.checkPlaylist-button {    /*檢視播放清單按鈕*/
+    top: 73%;
+}
+.control-users-button {    /*管理使用者按鈕*/
+    top: 81%;
+}
+
+/*顯示音樂清單相關*/
+.edit-song-btn {
+    background-color: #463e3e;
+    color: #fff; 
+    border: none; 
+    border-radius: 3px; 
+    transition: background-color 0.3s ease;
+    cursor: pointer; 
+}
+.edit-song-btn:hover {
+    background-color: #aaa;
+}
+.edit-song-btn:focus {
+    outline: none;
+}

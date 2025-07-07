@@ -1,0 +1,535 @@
+body {
+    background: url('images/background.jpg') center center fixed;
+    background-size: cover;
+    background-color: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: -9999;
+}
+.main-icon {
+    position: fixed;
+    max-width: 10%;
+    top: 1%;
+    left: 1%;
+    z-index: 9999;
+}
+/*框框相關*/
+.bar {
+    position: fixed;
+    border-radius: 20px;
+    background-color: #fff;
+    border: #aaa solid 1px;
+    z-index: 1;
+}
+.top-bar {
+    width: 82.5%;
+    height: 9%; 
+    right: 0px;
+}
+.top-left-bar {
+    width: 17%;
+    height: 20%; 
+    left: 0px;
+}
+.left-bar {
+    width: 17%;
+    height: 79%; 
+    left: 0px;
+    bottom: 0px;
+}
+/*右上角頭像控制相關*/
+.userinfo-popup {
+    display: none;
+    position: fixed;
+    min-width: 50px; /* 調整寬度 */
+    min-height: 50px; /* 調整最小高度 */
+    top: 75px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    z-index: 9999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    white-space: nowrap; /* 避免內容換行 */
+}
+.user-avatar {
+    position: fixed;
+    z-index: 9999;
+    width: 60px;
+    height: 60px;
+    top: 15px;
+    right: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.welcome-word {
+    position: fixed;
+    left: 20%;
+    top: 2.5%;
+    font-weight: bold;
+    font-size: 1.4vw;
+    z-index: 9999;
+}
+.hint-word {
+    position: fixed;
+    top: 3.5%;
+    right: 10%;
+    color: gray;
+    z-index: 9999;
+}
+/*登出按鈕*/
+.logoutBtn {
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.logoutBtn:hover {
+    background-color: #CCCCCC;
+}
+/*開發者模式相關*/
+.mode {
+    position: fixed;
+    width: 17%;
+    height: 20%; 
+    left: 50%;
+    top: 2.5%;
+    font-weight: bold;
+    font-size: 1.6vw;
+    text-align: center;
+    z-index: 9997;
+}
+/*搜尋相關*/
+.search {
+    position: fixed;
+    top: 3.3%;
+    left: 25%;
+    width: 22%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 9999;
+}
+#searchKeyWord {
+    padding-left: 20px; /* 調整左邊間距 */
+    padding-right: 8px; /* 可以調整右邊間距 */
+    flex: 1;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+}
+.search-button {
+    background-color: #27899b;
+    color: #fff; /* 文字颜色 */
+    border: none; /* 無邊框 */
+    border-radius: 30px; /* 圆角 */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 15%;
+    align-items: center;
+    flex-direction: column;
+}
+.search-button:hover {
+    background-color: #4683da;
+}
+.search-button:focus {
+    outline: none;
+}
+.search-container {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    z-index: 9999;
+}
+#searchInput {
+    width: 100%;
+    padding-left: 20px; /* 調整左邊間距 */
+    padding-right: 8px; /* 可以調整右邊間距 */
+    border-radius: 30px;
+    border: 1px solid #ccc;
+}
+.searchicon {
+    z-index: 9999;
+}
+/*左側菜單按鈕相關*/
+.menu {
+    position: fixed;
+    background: none;
+    left: 1.5%;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #000;
+    transition: color 0.3s ease;
+    font-weight: bold;
+    font-size: 1.4vw;
+    z-index: 9999;
+}
+.menu:hover {
+    color:gray;
+}
+/*底部播放器相關*/
+.music-player-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 8%;
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9001;
+}
+.music-player {
+    position: fixed;
+    align-items: center;
+    width: 40%;
+    z-index: 9002;
+}
+.bottom-music-cover {
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 10px;
+    margin-left: 1%;
+}
+.music-details-container {
+    flex-grow: 1;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    z-index: 9001;
+}
+.bottom-songName {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.bottom-artistName {
+    margin-bottom: 6px;
+    font-size: 12px;
+}
+/*顯示音樂清單相關*/
+.music-list {
+    position: relative;
+    top: 100px;
+    left: 58%;
+    transform: translateX(-50%);
+    width: 80%;
+    overflow-y: auto;
+    max-height: 83vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.music-list::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.music-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(7, 1fr);
+}
+.music-item {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.music-info {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 100%;
+}
+.music-cover {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.delete-btn,
+.delete-play-btn,
+.play-button,
+.play-playlist-button {
+    position: absolute;
+    bottom: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.delete-btn,
+.delete-play-btn {
+    left: 10px;
+}
+.play-button,
+.play-playlist-button {
+    right: 10px;
+}
+@media (max-width: 1600px) {
+    .music-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+@media (max-width: 1200px) {
+    .music-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 900px) {
+    .music-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .music-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 400px) {
+    .music-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* 檢視音樂播放清單相關 */
+.playlist-list {
+    position: relative;
+    top: 100px;
+    left: 58%;
+    transform: translateX(-50%);
+    width: 80%;
+    overflow-y: auto;
+    max-height: 83vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+    scrollbar-width: none;
+}
+.playlist-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.playlist-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #000;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.playlist-name {
+    white-space: nowrap;
+    font-weight: bold;
+}
+.Song-list-control-btn {
+    display: absolute;
+    justify-content: space-between;
+    width: 150px;
+    height: 50px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 12px 12px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.Song-list-control-btn:hover {
+    background-color: lightblue;
+}
+.Song-list-control-btn:focus {
+    outline: none;
+}
+/* 分頁按鈕樣式 */
+.pagination {
+    position: relative;
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+.pagination a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    color: #333;
+    text-decoration: none;
+    border-radius: 3px;
+}
+.pagination a.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+.show-playlistdetail-button {
+    background-color: #004080; /* 深藍色背景 */
+    color: #fff; /* 文字颜色 */
+    border: none; /* 無邊框 */
+    padding: 2px 4px; /* 上下左右邊距 */
+    border-radius: 20px; /* 圆角 */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 15%;
+}
+/*詳細檢視音樂播放清單相關 */
+.playlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.playlist-header h3 {
+    margin: 0;
+    font-weight: bold;
+}
+.play-all-button { 
+    background-color: #27899b;
+    color: #fff; /* 文字颜色 */
+    border: none; /* 無邊框 */
+    padding: 8px 16px;
+    border-radius: 30px; /* 圆角 */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 15%;
+    align-items: center;
+    flex-direction: column;
+}
+.play-all-button:hover {
+    background-color: #4683da;
+}
+.play-all-button:focus {
+    outline: none;
+}
+/*管理使用者相關*/
+.account-container {
+    position: relative;
+    top: 100px;
+    left: 58%;
+    transform: translateX(-50%);
+    width: 80%;
+    overflow-y: auto;
+    max-height: 83vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+    scrollbar-width: none;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.table tr {
+    background-color: white;
+    color: black;
+}
+.table th, .table td {
+    padding: 8px;
+    text-align: center;
+}
+.table th {
+    background-color: gray;
+    color: white;
+}
+.btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    border: 1px solid #0056b3;
+}
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: 1px solid #dc3545;
+}
+.btn-danger:hover {
+    background-color: #c82333;
+    border: 1px solid #c82333;
+}
+/*表單按鈕相關*/
+.form-button {
+    background-color: #004080; /* 深藍色背景 */
+    color: #fff; /* 文字颜色 */
+    border: none; /* 無邊框 */
+    padding: 12px 24px; /* 上下左右邊距 */
+    border-radius: 30px; /* 圆角 */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.form-button:hover {
+    background-color: #002b66;
+}
+/*表單文字格式相關*/
+.input-row {
+    font-family: system-ui;
+    text-align: left;
+    color: #000;
+    margin-top: 5px;
+}
+/*歌曲表單相關*/
+.songinfo-form {
+    position: fixed;
+    top: 150px;
+    left: 380px;
+    border: #aaa solid 1px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px;
+    width: 370px;
+    background-color: #fff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 9999;
+}
+/*編輯 and 新增至播放清單按鈕*/
+.edit-song-btn,
+.add-to-playlist-btn {
+    background-color: #463e3e;
+    color: #fff; 
+    border: none; 
+    border-radius: 3px; 
+    transition: background-color 0.3s ease;
+    cursor: pointer; 
+}
+.edit-song-btn:hover,
+.add-to-playlist-btn:hover {
+    background-color: #aaa;
+}
+.edit-song-btn:focus,
+.add-to-playlist-btn:focus {
+    outline: none;
+}
+/*已有的音樂播放清單*/
+#playlistList {
+    text-align: left;
+}

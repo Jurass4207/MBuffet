@@ -1,0 +1,16 @@
+/*左側菜單按鈕相關*/
+.showMusiclist-button {    /*顯示音樂清單按鈕*/
+    top: 25%;
+}
+.createPlaylist-button {   /*建立播放清單按鈕*/
+    top: 35%;
+}
+.deletePlaylist-button {   /*刪除播放清單按鈕*/
+    top: 45%;
+}
+.checkPlaylist-button {    /*檢視播放清單按鈕*/
+    top: 55%;
+}
+.control-users-button {    /*管理使用者按鈕*/
+    top: 65%;
+}
