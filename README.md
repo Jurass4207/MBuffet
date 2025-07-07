@@ -1,12 +1,23 @@
-# 🎧 MBuffet - Music Playback and Playlist Management System
+# MBuffet - Music Playback and Playlist Management System
 
 MBuffet is a web-based prototype music platform developed using PHP and MySQL. It features user authentication, music and playlist management interfaces, and a basic playback system. This project was developed as a coursework assignment to gain hands-on experience in full-stack development and database-driven application design.
 
-> ⚠️ Note: All music files have been removed due to copyright concerns. Playback functionality remains for demonstration purposes only.
+> Note: All music files have been removed due to copyright concerns. Playback functionality remains for demonstration purposes only.
 
 ---
 
-## 📸 Screenshots
+## Features
+
+- User authentication system (login & registration)
+- Music management: Add, edit, and delete songs and artists
+- Playlist system: Create, view, and play music playlists
+- Admin dashboard: Manage all users, songs, and playlists
+- User dashboard: View personal account info and playlists
+- Modal-based UI: Smooth popup interfaces for data editing
+- Responsive frontend interface built with HTML/CSS/JS
+- Backend and database implemented with PHP and MySQL
+
+## Screenshots
 
 📌 **Login Page**  
 ![Login Page](screenshots/Login.PNG)
@@ -22,7 +33,7 @@ MBuffet is a web-based prototype music platform developed using PHP and MySQL. I
 
 ---
 
-## 🔧 Key Features
+## Key Features
 
 - User registration, login, and account management  
 - Add/edit/delete songs, artists (bands), and playlists  
@@ -32,7 +43,7 @@ MBuffet is a web-based prototype music platform developed using PHP and MySQL. I
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer      | Technologies           |
 |------------|------------------------|
@@ -43,7 +54,7 @@ MBuffet is a web-based prototype music platform developed using PHP and MySQL. I
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 1. Install [XAMPP](https://www.apachefriends.org/)
 2. Clone this repository into the `htdocs/` folder
@@ -53,7 +64,7 @@ MBuffet is a web-based prototype music platform developed using PHP and MySQL. I
 
 ---
 
-## 🗃️ Database Schema Overview
+## Database Schema Overview
 
 - `accounts`: Stores user credentials and metadata  
 - `songs`: Stores song metadata  
@@ -63,13 +74,13 @@ MBuffet is a web-based prototype music platform developed using PHP and MySQL. I
 
 ---
 
-## 💡 Developer Notes
+## Developer Notes
 
 > This project was a valuable introduction to full-stack web development. Through building both frontend and backend components, designing the database schema, and integrating CRUD functionality, the development process significantly improved understanding of data flow, server-client interaction, and user interface implementation.
 
 ---
 
-## 🚫 Disclaimer
+## Disclaimer
 
 - Music playback functionality is operational, but no actual audio files are included
 - This project is for learning and demonstration purposes only and is not production-ready
